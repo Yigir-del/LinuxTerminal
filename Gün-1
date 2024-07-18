@@ -1,1 +1,46 @@
+whoami --> kimim ben
+hostname
+
+-pwd -->printworking
+Bulundugumuz dizini yazdirir.
+
+-ls --->list
+Dizindeki dosyalari yazdirir.
+
+-ls -l --->long list
+Bilgi vererek listeler.
+
+-setxkbmap tr 
+klavyeyi türkçe klavye yapar.
+
+-touch (BelgeAdı).(BelgeTürü)---> touch myTextFile.txt
+Yeni bir dosya oluşturur.
+
+-cat (BelgeAdı).(BelgeTürü) ---> cat myTextFile.txt
+Dosyanın içeriğini görüntülemek için kullanılır.
+
+-echo "cheese" > mtTextFile.txt
+//
+1-echo "Cheese": Terminalde "Cheese" metnini ekrana yazdırır.
+2-'>': Bu sembol, komutun çıktısını bir dosyaya yönlendirmek için kullanılır.
+3-myTEXTfile: Yönlendirilen dosyanın adı. Eğer bu dosya yoksa, oluşturulur; eğer varsa, varolan içeriği silip yeni içeriği yazar.
+4- '>>' yaparsan içeriğe dokunmadan sonuna ekler.
+//
+-rm ---> remove
+Silme işlemi.(dosyaları veya dizinleri silemez)
+-rmdir --> klasör silmenize olanak tanır.
+
+-mv --->movement
+//
+1-Dosya Taşıma: mv komutunu kullanarak bir dosyayı başka bir dizine taşıyabilirsiniz.
+-mv dosya1.txt yeni_dizin/
+
+2-Dosya Yeniden Adlandırma: mv komutunu kullanarak aynı zamanda bir dosyanın adını da değiştirebilirsiniz.
+-mv eski_ad.txt yeni_ad.txt
+
+3-Kuvvetli Taşıma: Eğer hedef dizinde aynı ada sahip bir dosya varsa, -f seçeneği ile mv komutu kullanılarak bu dosya ezilebilir
+//
+
+-cp ---> copy
+-cp ast.txt ast1.txt
 
