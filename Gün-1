@@ -44,3 +44,34 @@ Silme işlemi.(dosyaları veya dizinleri silemez)
 -cp ---> copy
 -cp ast.txt ast1.txt
 
+
+
+Linux kabuğumuzu değiştirmek istersek.
+-which bash
+Diyerek bash kabuğumuzun yerini öğreniyoruz.
+-chsh -s  (bash kabuğunun bulunduğu dizin)
+Kaydet çık yapıp tekrar girince değiştini görmek için.
+-echo SHELL
+Diyoruz.
+-cat /etc/shells
+Diyerek ise geçiş yapabileceğimiz kabykları görebiliriz.
+
+
+Bu komut sayesinde dosyayı hangi dizinde oluşturacağımı yönetebiliyorum.
+-touch ~/test.txt ~/Desktop/test.txt 
+
+Herhangi bir dosyayı bulmak için 'find' aracını kullanabiliriz.
+-find /home/ -name test.txt
+/home/kali/Desktop/test.txt
+/home/kali/test.txt
+
+
+Bukomut ile bir betik dosyası oluşturabilir ve içine veri girişi yapmamız için beklemesini sağlayabiliriz.
+-cat > betik.sh
+'cat >'  bu kullanım veri girişi yapmama olanak tanır.
+sh uzantısının anlamı ise kabuk betiği olduğunu belirtmek (shell script).
+
+
+
+
+
