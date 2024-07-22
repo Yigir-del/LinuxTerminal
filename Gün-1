@@ -72,6 +72,80 @@ Bukomut ile bir betik dosyası oluşturabilir ve içine veri girişi yapmamız i
 sh uzantısının anlamı ise kabuk betiği olduğunu belirtmek (shell script).
 
 
+Bu komut ile PATH  yolunun sorguladığı dizinleri görebilirsiniz.
+-echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games
+Ve eğer betik dosyamı bu dizinlerden herhangi birine taşırsam sadece  betik.sh    yazarak çalıştırabilirim.
+
+Burda da tıpkı normal kodlama dillerinde olduğu gibi değişkenler var 
+Ad="Ahmet"
+Dikkat etmeniz gereken şey '=' operatörünün sağında ve solunda boşluk olmaması lazım.
+
+echo $Ad   diyerek bu aracı çalıştırabiliriz $ sembolunu gören echo aracı onun bir değişke olduğunu anlıyor.
+
+-bash  yazarak yeni bir kabuğa geçebilir  ve exit yazarak eski kabuğa dönebilirsiniz.
+-export ad    diyerek değişkeninizi global hale getirmesseniz diğer kabuklarda kullanmassınz.
+
+
+Ama bu değişkenler farklı bir komut satırı açarsak orada çalışmayacaktır bunun sebebi aynı komut satırının farklı kabuklarında miras bırakma olayı varken farklı  komut satırlarında miras bırakma olayı gerçekleşemiyor.
+Bunu çözmenin yolu bu değişkeni konfigürasyon dosyalarının içinde tanımlamak.
+
+Bu dosyalar 2 ye ayrılır
+
+Sistem Geneli İçin Yapılandırma                                             
+-----------------------------------------------------------------------------------------------------
+Linux çok kullanıcılı bir işletim sistemi olduğu için
+tüm kullanıcılar üzerinde geçerli olabilecek toplu yapılandırma kuralları tanımlayabilmek adına
+sistem genelinde kullanılan yapılandırma dosyalarında düzenlemeler yapabiliriz.
+
+/etc/profile
+/etc/bashrc
+/etc/bash.bashrc
+
+ Kullanıcı Bazlı Yapılandırma
+------------------------------------------------------------------------------------------------------
+Değişikliklerin tüm kullanıcıları değil de özel olarak tek bir kullanıcıyı etkilemesini istersek
+kullanıcının kendi ev dizininde bulunan yapılandırma dosyalarında düzenlemeler yapabiliriz.
+
+~/.bash_profile
+~/.bashrc
+~/.bash_login
+~/.profile
+
+
+.bashrc  dosyası yeni bir terminal penceresi açıldığında otomatik olarak çalışan bir yapılandırma dosyasıdır.
+Eğer PATH  yoluna yeni bir yol dizini eklemek istersek.
+
+1-mkdir ~/Desktop/yeni-dizin
+2-sudo nano /etc/bash.bashrc
+3-export PATH=”$PATH:/home/taylan/Desktop/yeni-dizin/”
+4-source /etc/bash.bashrc
+5-taylan@linuxdersleri.net:~$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/home/taylan/Desktop/yeni-dizin
+
+6-cat > test.sh
+7-echo "bu bir test programıdır"                                                                   
+8-chmod +x test.sh                                                                               
+9-mv test.sh ~/Desktop/yeni-dizin/
+10-test.sh
+
+Biraz karmaşık gözüküyor olabilir ama cidden çok kolay
+1-İlk olarak yeni bir dizin oluşturuyoruz adını istediğiniz şekilde belirleyebilirsiniz.
+2-nano aracını çalıştırarak terminalin yapılandırma dosyası üzerinde değişiklik yapmak istiyoruz tabiki belli bir yetki seviyesi istediği için basşına sudo yazıyoruz ki şifremiz ile erişim sağlayalım
+3-En alta iniyoruz ve PATH  değişkenini global değişken olarak tanımlıyoruz ki terminal açıldığında her kabukta işlev göstersin, sonra da PATH global değişkenine hem önceki adresleri atıyoruz hemde yeni bizim oluşturduğumuz adresi atıyoruz.
+4-Source diyerek yapılandırma dosyasını seçerek değişikliklerin kaydedilip yürütülmesini sağlıyoruz isterseniz kapatıp açadabilirsiniz sistemi.
+5-Değişikliklerin geçerli olduğu görmek  için PATH yolllarını gözden geçiriyoruz , işe yaradığını sizde görebilirsiniz.
+6-test.sh adında bir betik dosyası oluşturuyoruz  ve  "cat >"   kombinasyonu ile içerisine veri girişi yapıcağımızı söylüyoruz.
+7-echo ile verimizi giriyoruz.
+8-chmod +x ile yetkilendiriyoruz betik dosyamızı ki  PATH yoluna taşıyabilelim.
+9-mv  aracı ile test  betiğimizi yeni dizinimize taşımış olduk.
+10-çalıştırdık ve çıktıyı gördük  çalışıyor.
+
+
+
+
+
+
 
 
 
