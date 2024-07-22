@@ -10,6 +10,9 @@ Dizindeki dosyalari yazdirir.
 -ls -l --->long list
 Bilgi vererek listeler.
 
+-ls -a ---->Full list
+Gizli dosyalarıda listeler
+
 -setxkbmap tr 
 klavyeyi türkçe klavye yapar.
 
@@ -143,6 +146,7 @@ Biraz karmaşık gözüküyor olabilir ama cidden çok kolay
 
 
 
+Dosyaların başına   "."   koyarsak gizli dosya sayılıyorlar.
 
 
 
