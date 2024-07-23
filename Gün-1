@@ -126,7 +126,7 @@ Eğer PATH  yoluna yeni bir yol dizini eklemek istersek.
 2-sudo nano /etc/bash.bashrc
 3-export PATH=”$PATH:/home/taylan/Desktop/yeni-dizin/”
 4-source /etc/bash.bashrc
-5-taylan@linuxdersleri.net:~$ echo $PATH
+5-echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/home/taylan/Desktop/yeni-dizin
 
 6-cat > test.sh
@@ -172,13 +172,44 @@ ctrl + Y --> yapıştır
 ctrl + U --> imlecin arkasında kalan tüm metni kesmek için kullanılır.
 ctrl + L --> komut satırını temizler ve yeni bir tanesini getirir.
 tab --> otomatik tamamlama için kullanılır.
+ctrl + R --> geçmiş listesinden bir arama başlatır.
+ctrl + C --> bir şeyleri sonlandırmak için kullanılır.
+
+
+Bu araç yardımıyla geçmiş girdilerimizi görebiliriz.
+-history
+ve eğer eskilerden birini çağırmak istersek.
+ !SıraNo
+şeklinde istediğimiz sıradaki girdiyi tekrar çağırabiliriz.
+
+2 ünlem yazarak gönderirsek ise son yazdığımız komutu  tekrar çalıştırırız.
+-!!
 
 
 
+Alias == Takma isim
+---------------------
+alias bas="echo bunu epey uzun bir komut olarak varsayın"
+Bunu sistem dosyalarının içine yerleştirirsek tüm terminal ve kabuklarda geçerli hale getirebiliriz.
+nano aracı ile yapmak çok basit.
+
+-sudo nano ~/.bashrc
+en alta inip
+-alias bas="echo bunu epey uzun bir komut olarak varsayın"
+bunu ekliyoruz kaydedip çıkıyoruz
+
+Dosyayı baştan okutuyoruz.
+-source ~/.bashrc
+
+-alias 
+Yazarak mevcut olan takma isimleri listeletebiliriz.
 
 
-
-
+Unalias == Takma isimleri kaldırmak
+------------------------------------
+-unalias bas
+Bu şekilde bas takma ismini kaldırabilirim mesela ama sadece kullandığım kabukta geçerli olur
+Sistemden silmek istiyorsam konfigürasyon dosyalarında oynamam gerekir.
 
 
 
