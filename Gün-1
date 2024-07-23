@@ -68,6 +68,9 @@ Herhangi bir dosyayı bulmak için 'find' aracını kullanabiliriz.
 /home/kali/Desktop/test.txt
 /home/kali/test.txt
 
+Veya 'locate' aracını
+-locate 'file_name'
+
 
 Bukomut ile bir betik dosyası oluşturabilir ve içine veri girişi yapmamız için beklemesini sağlayabiliriz.
 -cat > betik.sh
@@ -147,6 +150,36 @@ Biraz karmaşık gözüküyor olabilir ama cidden çok kolay
 
 
 Dosyaların başına   "."   koyarsak gizli dosya sayılıyorlar.
+
+
+Linux Kısayolları
+---------------------
+İmleç kısayolları/
+ctrl + A --> imleci satır başına getirir.
+ctrl + E --> imleci satır sonuna getirir.
+ctrl + B --> imleci sola hareket ettirir.
+ctrl + F --> imleci sağa hareket ettirir.
+alt + F --> bir kelime ileri atlamak için kullanılır.
+alt + B --> bir kelime geri atlamak için kullanılır.
+
+Düzenleme kısayolları/
+alt + Backspace --> imleçten bir önceki kelimeyi silmek için kullanılır.
+alt + D --> imleçten sonraki kelimeleri silmek için kullanılır.
+ctrl + _ --> silinen karakter veya kelimeleri geri getirmek için kullanılır.
+alt + T --> imlecin sağındaki ve solundaki kelimelerin yerlerini değiştirmek için kullanılır.
+ctrl + W --> kes
+ctrl + Y --> yapıştır
+ctrl + U --> imlecin arkasında kalan tüm metni kesmek için kullanılır.
+ctrl + L --> komut satırını temizler ve yeni bir tanesini getirir.
+tab --> otomatik tamamlama için kullanılır.
+
+
+
+
+
+
+
+
 
 
 
