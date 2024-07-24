@@ -212,8 +212,38 @@ Bu şekilde bas takma ismini kaldırabilirim mesela ama sadece kullandığım ka
 Sistemden silmek istiyorsam konfigürasyon dosyalarında oynamam gerekir.
 
 
+-MAN
+Man komutu kullanıcağımız diğer araçlar hakkında bilgi sayfası açar.
+-man <araç ismi>  
+şeklinde kullanılır
+İşte orada karşılaşabileceğimiz bazı başlıklar.
+
+NAME: İlgili aracın isminin ve işlevinin kısaca açıkladığı bölümdür.
+SYNOPSIS: Aracın nasıl kullanılacağına dair kısa açıklamalar ve örnek komutları içerir. Bu bölümde genellikle sık kullanılan seçenek ve parametrelerinin nasıl girilmesi gerektiği şablon olarak gösterilir.
+DESCRIPTION: İlgili aracın yerine getirdiği görev hakkında nispeten daha uzun ve detaylı şekilde açıklama içeren bölüm yani esas açıklama bölümü.
+OPTIONS: Aracın sahip olduğu seçenekler ve bu seçeneklerin kullanımı hakkında bilgi sunan bölümdür. Buradaki bilgiler çoğunlukla ilgili aracın —help seçeneği ile sunulan seçenek bilgileridir.
+EXAMPLES: İlgili aracın kullanıma dair örneklerin yer aldığı bölümdür. Bu bölümde genellikle çok sık tercih edilen, ya da aracın kabiliyetlerini kavramamızı sağlayacak örneklere sıklıkla yer veriliyor.
+AUTHOR: Yazarların isimleri ve iletişim bilgilerinin yer aldığı bölümdür.
+REPORTING BUGS: Hata veya eksikleri bildirebileceğiniz iletişim adresleri hakkında bilgi sunuyor.
+COPYRIGHT VE SEE ALSO: Son bölümde ise, telif hakları ve daha fazla bilgiyi nereden alabileceğimiz gibi ekstra detayları belirten açıklama bulunuyor.
 
 
+->man -k "anahtar_kelimeler"
+Aradığım özelliğe sahip araçları listeletebilirim.
+---------------------------------------------------------------------------
+man -k "change file"
+chattr (1)           - change file attributes on a Linux file system
+chcon (1)            - change file security context
+chmod (1)            - change file mode bits
+---------------------------------------------------------------------------
+->apropos komutu da man -k    komutu ile aynı işi yapar.
 
+->info <araç_adı>
+Bu da yine bilgi verir ama "man" kadar popüler değildir.
+
+
+Eklediğimiz araçlarla birlikte dökümantasyon dosyalarını da edinmiş oluruz.
+İşte o dökümantasyon dosyalarının bulunduğu dizin.
+ /usr/share/doc 
 
 
