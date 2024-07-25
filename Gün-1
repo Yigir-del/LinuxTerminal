@@ -247,3 +247,47 @@ Eklediğimiz araçlarla birlikte dökümantasyon dosyalarını da edinmiş oluru
  /usr/share/doc 
 
 
+
+Dizinlerde gezinmek \
+    /bin (Binaries): Bu dizin, tüm kullanıcıların erişebileceği temel işlevleri gerçekleştirmek için kullanılan programları içeriyor.
+    /sbin (System Binaries): Bu dizin, sistem yöneticileri tarafından kullanılan ve sistem yönetimi ve bakımıyla ilgili önemli programları içeriyor.
+
+/boot
+Önyükleme yani “boot” aşaması için gereken dosyaları barındıran dizindir. Ne yaptığınızdan emin olmadığınız sürece bu dizini kurcalamanız gerekmeyecektir.
+
+/dev
+/dev dizini “devices” yani “aygıtlar” kelimesinin kısaltmasından geliyor. Bu dizin, sisteme bağlı olan donanım aygıtlarını temsil eden aygıt dosyalarını içeriyor. Linux üzerinde her şey bir dosya gibi ele alındığı için sisteme bağlı olan aygıtları temsil eden dosyalar da bu dizinde bulunuyor.
+
+/etc
+/etc dizini, sistemdeki konfigürasyon dosyalarının tutulduğu dizindir. Genellikle istisnalar hariç Linux sisteminde bir hizmetleri yapılandırmamız veya diğer çeşitli temel ayarları değiştirmemiz gerekiyorsa, bakacağımız ilk yer burasıdır.
+
+/home
+Daha önce de bahsetmiş olduğumuz gibi home dizini altında her bir kullanıcının ismiyle oluşturulmuş klasörler vardır. Bu klasörler ilgili kullanıcının ev dizini olarak geçer. Her bir kullanıcının kendi kullanıcı hesabına özgü olan çeşitli konfigürasyon dosyaları, belgeleri resimleri ve diğer çeşitli dosyaları bu dizinde bulunur. Örneğin ben “taylan” isimli kullanıcı hesabını yönettiğim için benim kullanıcı hesabımın ev dizini /home/taylan adresinde yer alıyor. Dizin içeriğine göz atmak için ls /home/taylan/ komutuyla listeleyebiliriz.
+
+/usr
+/usr dizini aslında neredeyse tüm komut dosyalarının, kütüphane dosyalarının ve çeşitli dokümantasyonlarla birlikte sistemin normal işleyişi için gerekli olan dosyaların bulunduğu dizindir.
+
+/tmp
+tmp dizini “temporary” yani “geçici” ifadesinden kısaltmasından geliyor. Geçici olarak tutulması gereken dosya ve klasörler için kullanılan bir dizin adresidir. Hem kullanıcılar hem de programlar, geçici içerikler için bu dizini kullanabiliyor. Bu dosyalar geçici olarak RAM üzerinde tutulduğu için bu dizin altındaki veriler sistem yeniden başlatıldığında silinmiş oluyor.
+
+/media ve /mnt
+media ve mnt dizinlerinin her ikisi de medya aygıtlarının bağlanması için kullanılıyor. Aralarındaki fark media dizini “USB bellek, harici disk, CD/DVD sürücüsü vb.” gibi harici çıkarılabilir medya aygıtlarını bağlamak için kullanılırken, mnt dizini ise genellikle geçici olarak disk bölümlerini bağlamak için kullanılan bir dizindir.
+
+/proc
+proc dizini önyükleme sırasında oluşturulduğu ve kapatma sırasında kaldırıldığı için her zaman mevcut gibi görünse de aslında sisteminiz ve o anda çalışan işlemleri hakkında birçok alakalı bilgi içeren sanal bir dosya sistemidir. Örneğin yeni bir işlem başlattığınızda bu dizin altında bu işlemle ilişkili yeni bir sanal dizin oluşturulacaktır. Dizinin “proc” ismi de “process” yani “işlem” ifadesinin kısaltmasından geliyor zaten.
+
+/root
+root dizini root kullanıcısının ev dizinidir. Tıpkı bizim ev dizinlerimizin home dizini altında kullanıcı adımızla barındırılıyor olması gibi root kullanıcısının ev dizini de ana dizinde “root” isimli klasörde barındırılıyor.
+
+/var
+var dizininin ismi “variable” yani “değişken” ifadesinin kısaltmasından geliyor. Bu şekilde isimlendirilmesinin nedeni, sürekli yenileri eklenen ve değişen dosyaların burada barındırılıyor olmasıdır. Log dosyaları, çeşitli veritabanı dosyaları ve benzeri pek çok veri bu dizin altında tutuluyor.
+
+/sys
+/sys dizini, çeşitli sistem bileşenleri ve sürücüleri hakkında bilgiler içeren dizindir.
+
+/run
+Sistem başlangıcından itibaren, sistem kaynaklarının nasıl kullanıldığına dair çeşitli bilgileri tutan bir dizindir. Bu veriler, sistemin o anda çalışan işlemlerinin ihtiyaçlarını karşılamak için gerekli olan türde geçici verilerdir. Örneğin geçici verileri tutmak veya araçlar arasında veri paylaşımını ve yönetimini mümkün kılmak için kullanılan çeşitli bilgiler bu dizin altında tutulur. İsminde de olduğu gibi “running” yani “çalışma” halindeki bilgiler bulunduğundan, sistem her yeniden başlatıldığında bu veriler de temizlenir.
+
+
+
+
