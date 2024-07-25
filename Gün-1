@@ -290,4 +290,14 @@ Sistem başlangıcından itibaren, sistem kaynaklarının nasıl kullanıldığ�
 
 
 
+Bir üst dizine dönmek için cd .. komutunu kullanabiliyoruz.
+
+Komut satırı üzerinden işlerimizi hallerken kimi zaman birbirinden çok uzak dizinler arasında hızlıca geçiş yapmak isteyebiliriz. Bu durumda en son bulunduğumuz bir önceki dizine doğrudan atlamak için cd - komutunu kullanabiliyoruz.
+
+
+
+
+
+
+
 
