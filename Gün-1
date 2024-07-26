@@ -296,6 +296,30 @@ Komut satırı üzerinden işlerimizi hallerken kimi zaman birbirinden çok uzak
 
 
 
+Eğer komut girerken bir dosya veya klasör isminde boşluk karakteri veya kabuk için özel anlam ifade eden özel bir karakter varsa kabuk bizim girdiğimiz komutu yanlış anlayabiliyor.
+Bu sebeple isminde özel karakterler veya boşluklar içeren klasörlerin doğru algılanabilmesi için klasör isimlerini tırnak içinde yazmamız gerekiyor.
+Eğer geçiş yapmak istediğimiz klasör isminde boşluk veya özel bir karakter varsa, bu klasör ismini mutlaka tırnak içinde özel olarak belirtmemiz gerekiyor.
+
+
+
+Görebildiğiniz gibi tek bir karakterin görmezden gelinmesi gerekiyorsa kolayca ters slash işaretini kullanabiliyoruz.
+Ben örnekler sırasında tek bir noktada bu karakteri kullandım ancak gerekiyorsa,
+görmezden gelinmesi gereken tüm karakterlerden önce bu ters slash işaretini tekrar tekrar kullanabilirsiniz.
+Örneğin ben “bu bir deneme metnidir” isminde bir klasör oluşturmak istersem
+komutumu mkdir bu\ bir\ deneme\ metnidir şeklinde girebilirim.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
