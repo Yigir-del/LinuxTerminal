@@ -309,6 +309,51 @@ görmezden gelinmesi gereken tüm karakterlerden önce bu ters slash işaretini 
 komutumu mkdir bu\ bir\ deneme\ metnidir şeklinde girebilirim.
 
 
+*********************ls**********************
+->ls -l
+-Eğer aldığımız çıktıda dosyanın veya klasörün türü, yetkileri, dosyanın sahibi ve dosyanın oluşturulma veya değiştirilme tarihi gibi ekstra detayları yani uzun çıktıları da istiyorsakİngilizce “long” yani “uzun” ifadesinin kısaltmasından gelen -l seçeneğini kullanabiliriz.
+->ls -la
+-Eğer standart olanlarla birlikte gizli içerikleri de listelemek istersek -a seçeneği kullanabiliriz. Bu seçenek all yani “hepsi” ifadesinin kısalmasından geliyor
+->ls -lh
+-Aldığımız çıktılardaki büyüklük birimlerini daha okunaklı şekilde elde etmek için “human readable” yani “insan tarafından okunabilir” ifadesinin kısaltmasından gelen h seçeneğini kullanabiliyoruz.
+->ls -lSh
+-Eğer çıktıları büyükten küçüğe olacak şekilde boyutlarına göre sıralamak istersek, büyük S seçeneğini kullanabiliyoruz. Bu “S” seçeneği muhtemelen tahmin ettiğiniz gibi İngilizce “Size” yani “boyut” ifadesinin kısaltmasından geliyor.
+->ls -lt
+-Dosya ve klasörleri değiştirilme tarihlerine göre en yeniden eskiye doğru sıralamak istersek t seçeneğini kullanabiliyoruz. Buradaki “t” seçeneği İngilizce “time” yani “zaman” ifadesinin kısaltmasından geliyor
+->ls -lr
+Fark ettiyseniz şu ana kadar ele aldığımız seçeneklerde hep tek yönlü listeleme mevcuttu. Örneğin boyutları sıralarken büyükten küçüğe, tarihleri de yeniden eskiye doğru sıralamıştık. Eğer ls çıktılarının normalde sunduğu herhangi bir çıktıyı tersten sıralamak istersek İngilizce “reverse” yani “ters” ifadesinin kısaltması olan r seçeneğini kullanmamız yeterli oluyor. Hemen bildiğimiz seçenekler üzerinden deneyelim.
+->ls /etc/apt 
+-Eğer mevcut bulunduğumuz dizini değil de başka bir dizindeki içerikleri listelemek istersek, ilgili dizininin tam adresini tıpkı cd komutunda olduğu gibi ls komutunun ardından yazmamız yeterli.
+->ls -l ~/.bashrc
+-Doğrudan bizim istediğimiz bir veya birden fazla dosya veya klasörlerin özelliklerini görebilmek için dosyanın tam dosya dizin adresin ls -l komutundan sonra yazmamız yeterli. Örneğin ben kendi ev dizinimde bulunan .bashrc dosyasının özelliklerini listelemek istersem ls -l ~/.bashrc şeklinde komutumu girmem yeterli.
+->ls -ld /etc/apt/         &&        ls -ld /etc/apt/ /var/tmp/ ~/.bashrc
+-Biz dizin içeriğinin değil de doğrudan apt dizinin özelliklerine bakmak istersek, ls komutuna “directory” yani “dizin” ifadesinin kısalmasında gelen d seçeneğini eklememiz yeterli. Denemek için bu kez ls -ld /etc/apt komutunu girelim.
+->ls -R 
+-Eğer herhangi bir dizin altında yer alan tüm dizinlerin içeriklerini listelemek istersek “Recursive” yani “özyineleme” ifadesinin kısalmasından gelen büyük R seçeneğini kullanma imkanına sahibiz. 
+
+
+
+********************mkdir**********************
+-Bulunduğumuz dizin dışında tam dizin adresi belirtirsek, eğer yetkimiz de varsa istediğimiz konumda istediğimiz isimde bir dizin de oluşturabiliriz.
+->~/Documents/belgeler
+-Örneğin ben mkdir ~/Documents/belgeler komutu ile kendi ev dizinimdeki Documents klasörünün içinde belgeler isimli yeni bir klasör oluşturabilirim.
+->mkdir -v a b c d
+-Eğer çoklu klasör oluştururken klasör oluşturma işlemini daha kolay takip etmek istersek, İngilizce “verbose” yani “ayrıntılı” ifadesinin kısaltması olan v seçeneğini de kullanmamız gerekiyor.
+->mkdir -p buyukanne/anne/cocuk
+-Eğer tek seferde iç içe birden fazla klasörü oluşturmak istersek mkdir komutunun p seçeneğini kullanabiliyoruz. Buradaki p seçeneği İngilizcedeki “parrent” yani “ebeveyn” ifadesinin kısalmasından geliyor.
+
+
+
+*********************rmdir***********************
+->rmdir
+-rmdir aracı yalnızca içeriği boş olan klasörleri silmemizi sağlıyor. Bu sayede, içeriği dolu olan klasörlerin yanlışlıkla silinmesinin de önüne geçilmiş oluyor. Özellikle toplu olarak klasör silmek için rmdir aracını sıklıkla kullanılıyor çünkü klasörlerin boş olduğundan emin olunabiliyor.
+
+
+
+
+
+
+
 
 
 
