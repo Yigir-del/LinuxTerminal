@@ -347,7 +347,8 @@ Fark ettiyseniz şu ana kadar ele aldığımız seçeneklerde hep tek yönlü li
 *********************rmdir***********************
 ->rmdir
 -rmdir aracı yalnızca içeriği boş olan klasörleri silmemizi sağlıyor. Bu sayede, içeriği dolu olan klasörlerin yanlışlıkla silinmesinin de önüne geçilmiş oluyor. Özellikle toplu olarak klasör silmek için rmdir aracını sıklıkla kullanılıyor çünkü klasörlerin boş olduğundan emin olunabiliyor.
-
+->rm -rf * .*
+-Var olan tüm dosyaları siler görünmezler dahil.
 
 
 
