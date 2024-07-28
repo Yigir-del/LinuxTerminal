@@ -352,6 +352,11 @@ Fark ettiyseniz şu ana kadar ele aldığımız seçeneklerde hep tek yönlü li
 
 
 
+**************Kabuk Genişletmeleri****************
+
+└─$ echo {1..3}{a..c}{A..C}
+1aA 1aB 1aC 1bA 1bB 1bC 1cA 1cB 1cC 2aA 2aB 2aC 2bA 2bB 2bC 2cA 2cB 2cC 3aA 3aB 3aC 3bA 3bB 3bC 3cA 3cB 3cC
+
 
 
 
